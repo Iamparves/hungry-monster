@@ -1,0 +1,242 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    width: 95%;
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+input:focus,
+button:focus {
+    outline: 0;
+}
+
+.img-cover-fit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.navbar__logo {
+    height: 70px;
+}
+
+.navbar__item {
+    list-style: none;
+    display: inline-block;
+}
+
+.navbar__item:not(:last-child) {
+    margin-right: 40px;
+}
+
+.navbar__link {
+    color: #383838;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+
+/* Meal Search Box */
+.meal__search--box {
+    width: 100%;
+    max-width: 570px;
+    margin: 30px auto 50px;
+    display: flex;
+    align-items: stretch;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.meal__search--input {
+    border: none;
+    background: #F8F7F5;
+    padding: 18px 18px 18px 50px;
+    width: calc(100% - 100px);
+}
+
+.meal__search--box::before {
+    content: '';
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 15px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/icon/search.png) no-repeat center center / contain;
+    z-index: 1;
+}
+
+.meal__search--input::placeholder {
+    color: #989898;
+}
+
+.meal__search {
+    background: #F06C4E;
+    border: 0;
+    color: #fff;
+    padding: 15px 20px;
+    width: 100px;
+    cursor: pointer;
+}
+
+
+/* Meal Cards */
+.meal__cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 25px;
+}
+
+.meal__card {
+    border-radius: 10px;
+    background: #F8F7F5;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.meal__img--box {
+    height: 220px;
+}
+
+.meal__content {
+    padding: 20px 15px;
+}
+
+.meal__title {
+    color: #252525;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+}
+
+
+/* Meal Not Found */
+.meal__not--found {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    color: #F06C4E;
+}
+
+
+/* Meal Description Card */
+.meal__description--box {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background: rgba(0, 0, 0, .4);
+    backdrop-filter: blur(10px);
+    z-index: 9;
+    padding: 30px 0;
+    visibility: hidden;
+    opacity: 0;
+    transition: .3s;
+}
+
+.meal__description {
+    max-width: 580px;
+    width: 95%;
+    background: #fff;
+    border-radius: 10px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.meal__description::-webkit-scrollbar {
+    background: #f0f0f0;
+    width: 10px;
+    border-radius: 10px;
+}
+
+.meal__description::-webkit-scrollbar-thumb {
+    background: linear-gradient(#f35f3d, #f37458);
+    border-radius: 10px;
+}
+
+.meal__description--img-box {
+    height: 320px;
+}
+
+.meal__description--close {
+    border: 0;
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    background: #d8d8d879;
+    backdrop-filter: blur(10px);
+    font-size: 45px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    cursor: pointer;
+    color: #F06C4E;
+    box-shadow: 0 0 30px rgba(0, 0, 0, .3);
+}
+
+.meal__description--content {
+    padding: 30px 20px;
+}
+
+.meal__description--title {
+    font-size: 35px;
+    font-weight: 700;
+}
+
+.meal__description--subtitle {
+    margin: 25px 0 20px;
+}
+
+.meal__description--item {
+    list-style: none;
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 15px;
+    color: #6C6C6C;
+}
+
+.meal__description--item::after {
+    content: '';
+    position: absolute;
+    top: calc(50% - 12px);
+    left: 0;
+    width: 24px;
+    height: 24px;
+    background: url(../img/icon/tick.png) no-repeat center center / contain;
+}
+
+@media screen and (max-width: 1200px){
+    .meal__cards {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px){
+    .meal__cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 500px){
+    .meal__cards {
+        grid-template-columns: 1fr;
+    }
+}

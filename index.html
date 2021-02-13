@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hungry Monster</title>
+    <!-- Google Fonts (Roboto) -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <header class="header">
+        <div class="container navbar">
+            <div class="navbar__logo--box">
+                <img src="img/logo.png" alt="Hungry Monster" class="navbar__logo">
+            </div>
+            <nav class="navbar__nav">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Home</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">About</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Recipes</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#" class="navbar__link">Blog</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="meals">
+            <div class="container">
+                <!-- Search Meal -->
+                <div class="meal__search--box">
+                    <input type="text" class="meal__search--input" placeholder="Search for a Meal...">
+                    <button id="meal__search" class="meal__search">Search</button>
+                </div>
+                <!-- Meal Content -->
+                <div class="meal__inner">
+                    <div class="meal__cards">
+                        <!-- Meal Card Template Start -->
+                        <!-- <div class="meal__card">
+                            <div class="meal__img--box">
+                                <img src="img/meal/meal-1.jpg" alt="" class="meal__img img-cover-fit">
+                            </div>
+                            <div class="meal__content">
+                                <h2 class="meal__title">Mustard champ</h2>
+                            </div>
+                        </div> -->
+                        <!-- Meal Card Template End -->
+                    </div>
+
+                    <!-- Meal Not Found Template -->
+                    <h2 class="meal__not--found"></h2>
+
+                    <div class="meal__description--box">
+                        <!-- Meal Description Template Start -->
+                        <!-- <div class="meal__description">
+                            <div class="meal__description--img-box">
+                                <button class="meal__description--close">&times;</button>
+                                <img src="img/meal/meal-1.jpg" alt="" class="meal__description--img img-cover-fit">
+                            </div>
+                            <div class="meal__description--content">
+                                <h2 class="meal__description--title">Mustard champ</h2>
+                                <h3 class="meal__description--subtitle">Ingredients</h3>
+                                <ul class="meal__description--list">
+                                    <li class="meal__description--item">1 cup whole raw almonds</li>
+                                    <li class="meal__description--item">1½ tbsp fresh rosemary (stems removed)</li>
+                                    <li class="meal__description--item">1 cup all purpose flour</li>
+                                    <li class="meal__description--item">1½ cups whole milk ricotta cheese (room temperature)</li>
+                                    <li class="meal__description--item">⅔ cup extra virgin olive oil</li>
+                                    <li class="meal__description--item">3 grams blood oranges (small, Cara Cara, or Valencia)</li>
+                                </ul>
+                            </div>
+                        </div> -->
+                        <!-- Meal Description Template End -->
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Main JS -->
+    <script src="js/script.js"></script>
+</body>
+
+</html>
